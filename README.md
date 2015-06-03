@@ -3,7 +3,7 @@
 ## Summary
 
 Based on a Socket.IO app from the book [*Node.js in Action*](http://www.manning.com/cantelon/) by Cantelon et al. 
-Adds several additional features. Designed as an project to explore the low-level features of Node.
+Adds several additional features. Designed as a project to use the low-level features of Node.
 
 ## About
 
