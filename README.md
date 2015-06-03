@@ -1,4 +1,4 @@
-# Chat App ([live](http://gukowsky-chat.herokuapp.com))
+# Chat App ([live](http://chat.mgukowsky.com))
 
 ## Summary
 
@@ -16,7 +16,7 @@ scalability by assigning each request/response pair a unique identifier even if 
 per millisecond.
 * Guarantees content is always delivered, even in the event of a 500 error.
 
-## [Live App](http://gukowsky-chat.herokuapp.com)
+## [Live App](http://chat.mgukowsky.com)
 
 ### Usage
 
