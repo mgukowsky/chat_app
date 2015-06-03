@@ -100,8 +100,9 @@ var server = http.createServer(function(req, res){
 	serveStatic(req, res, cache, absPath);
 });
 
+//For Heroku compatibility (Heroku apps run on port 5000)
 server.listen(process.env.PORT || 5000, function(){
-	utils.log("Server started on port 3000.");
+	utils.log("Server started on port 5000.");
 });
 
 var chatServer = require('./lib/chat_server');

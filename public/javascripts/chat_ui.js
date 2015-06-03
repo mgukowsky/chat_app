@@ -43,6 +43,10 @@ $(document).ready(function() {
 		$('#messages').append(divSystemContentElement(message));
 	});
 	
+	socket.on('setCookie', function(userId){
+		document.cookie = 'userId=' + userId.val;
+	});
+	
 	socket.on('joinResult', function(result) {
 		$('#room').text(result.room);
 		$('#messages').append(divSystemContentElement('Room changed.'));

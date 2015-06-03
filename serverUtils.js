@@ -3,7 +3,9 @@ var fs = require('fs');
 module.exports = {
 	log: function(data){
 		var d = new Date();
-		fs.appendFile('./serverLog.log', d.toUTCString() + ': ' + data + '\r\n'); //need \r in windows
+		console.log(d.toUTCString() + ': ' + data);
+		//Uncomment below to write to a local log file
+		//fs.appendFile('./serverLog.log', d.toUTCString() + ': ' + data + '\r\n'); //need \r in windows
 	},
 	
 	logRequest: function(req){
