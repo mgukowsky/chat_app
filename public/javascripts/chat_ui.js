@@ -19,23 +19,24 @@ function processUserInput(chatApp, socket) {
 		}
 	} else {
 		//Otherwise, treat as a message to broadcast
-		chatApp.sendMessage($('#room').text(), message);
-		$('#messages').append(divEscapedContentElement(message));
+		chatApp.sendMessage($('#room').text(), message, $('#name').text());
+		$('#messages').append(divEscapedContentElement($('#name').text() + ': ' + message));
 		$('#messages').scrollTop($('#messages').prop('scrollHeight'));
 	}
 	$('#send-message').val('');
 };
 
-//Client side socket to handle events
-var socket = io.connect();
-
 //Ensure the socket doesn't catch events until the DOM is fully loaded
 $(document).ready(function() {
+	//Client side socket to handle events
+	var socket = io.connect();
+	
 	var chatApp = new Chat(socket);
 	
 	socket.on('nameResult', function(result) {
 		var message;
 		if (result.success) {
+			$('#name').text(result.name);
 			message = 'You are now known as ' + result.name + '.';
 		} else {
 			message = result.message;
@@ -69,6 +70,17 @@ $(document).ready(function() {
 			chatApp.processCommand('/join ' + $(this).text());
 			$('#send-message').focus();
 		});
+	});
+	
+	socket.on('readyForRecentMessages', function(){
+		socket.emit('getRecentMessages', {bucket: $('#room').text()});
+	});
+	
+	socket.on('sendRecentMessages', function(bucket){
+		var chatBox = $('#messages');
+		for (msg in bucket.messages) {
+			chatBox.append(divEscapedContentElement(bucket.messages[msg]));
+		};
 	});
 	
 	setInterval(function() {

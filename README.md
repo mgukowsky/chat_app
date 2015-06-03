@@ -10,6 +10,7 @@ Adds several additional features. Designed as a project to use the low-level fea
 * Socket.IO functionality is used for faster responsiveness on page updates than AJAX requests.
 * Served assets are cached server-side to allow for fast delivery.
 * Uses cookies to memorize user names, including default names, keeping a client-side registry of all user IDs.
+* Caches and serves 100 most recent posts for each room. Server remembers posts even when the room is empty. 
 * Writes all requests and responses to a log file, using a unique identifier for each request. Ensures
 scalability by assigning each request/response pair a unique identifier even if more than one occurs
 per millisecond.

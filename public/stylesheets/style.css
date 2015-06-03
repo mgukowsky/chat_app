@@ -13,7 +13,7 @@ a {
 	margin-right: auto;
 }
 
-#room {
+#room, #name {
 	background-color: #ddd;
 	margin-bottom: 1em;
 }
