@@ -3,7 +3,7 @@
 ## Summary
 
 Based on a Socket.IO app from the book [*Node.js in Action*](http://www.manning.com/cantelon/) by Cantelon et al. 
-Adds several additional features.
+Adds several additional features. Designed as an project to explore the low-level features of Node.
 
 ## About
 
@@ -31,9 +31,9 @@ If the room does not yet exist, it will be created.
 
 ## Build Locally
 
-Download the zip file, and check that you have Node.js and npm installed. 
+Download the zip file, extract the contents, and check that you have Node.js and npm installed. 
 
-Run the following two commands to install dependencies and start the server:
+To install dependencies and start the server, run the following two commands in the directory where you extracted the files:
 
 	npm install
 	node server.js
