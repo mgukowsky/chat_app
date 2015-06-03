@@ -100,7 +100,7 @@ var server = http.createServer(function(req, res){
 	serveStatic(req, res, cache, absPath);
 });
 
-server.listen(3000, function(){
+server.listen(process.env.PORT || 5000, function(){
 	utils.log("Server started on port 3000.");
 });
 
