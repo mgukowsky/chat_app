@@ -5,16 +5,17 @@
 	<link rel='stylesheet' href='/stylesheets/style.css'></link>
 </head>
 <body>
+	<h1 id="title-bar">Chat Away!</h1>
 	<div id='content'>
 		<div id='room'></div>
 		<div id='name'></div>
 		<div id='room-list'></div>
 		<div id='messages'></div>
-		
+
 		<form id='send-form'>
 			<input id='send-message'>
 			<input id='send-button' type='submit' value='Send'>
-			
+
 			<div id='help'>
 				Chat commands:
 				<ul>
@@ -24,7 +25,11 @@
 			</div>
 		</form>
 	</div>
-	
+	<p id="footer">Based on a Socket.IO app from the book
+		<a src="http://www.manning.com/cantelon/">Node.js in Action</a>
+		by Cantelon et al. | 
+		View on <a src="https://github.com/mgukowsky/chat_app/">GitHub</a></p>
+
 	<script src='/socket.io/socket.io.js' type='application/javascript'></script>
 	<script src='https://code.jquery.com/jquery-1.8.0.min.js'
 		type='application/javascript'></script>

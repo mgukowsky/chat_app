@@ -1,10 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+* {
+	border-radius: 20px;
+}
+
+html {
+	border-radius: 0px;
+}
+
 body {
-	padding: 50px;
+	margin: 0px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	border: 0px solid #000;
+	border-radius: 0px;
+	background-color: #003399;
+	color: #000;
 }
 
 a {
 	color: #00B7FF;
+}
+
+input:hover, a:hover{
+	cursor: pointer;
+}
+
+#title-bar {
+	padding: 20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border-radius: 0px;
+	font-family: 'Indie Flower', cursive;
+	font-size: 50px;
+	text-align: center;
+	color: #FFF;
+	background: linear-gradient(#000, #777);
+	width: 100%;
+	height: 60px;
 }
 
 #content {
@@ -15,7 +47,9 @@ a {
 
 #room, #name {
 	background-color: #ddd;
+	padding: 5px;
 	margin-bottom: 1em;
+	text-align: center;
 }
 
 #messages {
@@ -23,6 +57,7 @@ a {
 	height: 300px;
 	overflow: auto;
 	background-color: #eee;
+	padding: 5px;
 	margin-bottom: 1em;
 	margin-right: 10px;
 }
@@ -35,19 +70,32 @@ a {
 }
 
 #room-list div {
-	border-bottom: 1px solid #eee;
+	border: 1px solid #EEE;
+	background-color:#FFFF00;
+	padding: 5px;
+	text-align: center;
 }
 
 #room-list div:hover {
-	background-color: #ddd;
+	background-color: #DDD;
+	cursor: pointer;
 }
 
 #send-message {
 	width: 700px;
 	margin-bottom: 1em;
 	margin-right: 1em;
+	padding: 5px;
 }
 
-#help {
-	font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+#help, #footer {
+	font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #FFF;
+}
+
+#footer {
+	border-top: 2px solid #CCC;
+	border-radius: 0px;
+	padding-top: 5px;
+	text-align: center;
 }
